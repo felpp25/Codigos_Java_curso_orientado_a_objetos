@@ -1,0 +1,73 @@
+package Lista2;
+
+import java.util.Scanner;
+
+public class Ex7 {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner (System.in);
+		double salario, salariofinal, valoraumento, valorpercentual;
+		int codigo, porcentagem, cargo;
+	
+		
+		System.out.println("\n\nCargos:");
+		System.out.println("(1)-Escriturario." );
+		System.out.println("(2)-Secretario." );
+		System.out.println("(3)-Caixa." );
+		System.out.println("(4)-Gerente." );
+		System.out.println("(5)-Diretor." );
+		System.out.println("(0)-Sair." );
+		System.out.print("Informe o codigo do funcionario:\n ");
+		codigo = ler.nextInt();
+		System.out.print("Informe o salario do funcionario:\n ");
+		salario = ler.nextDouble();
+		salariofinal = 0;
+		valoraumento = 0;
+		cargo = 0;
+		switch (codigo) {
+		case 0:
+			break;
+		case 1:
+			salariofinal = salario * 0.5;
+			break;
+		case 2:
+			salariofinal = salario * 0.35;
+			break;	
+		case 3:
+			salariofinal = salario * 0.2;
+			break;	
+		case 4:
+			salariofinal = salario * 0.1;
+			break;	
+		case 5:
+			System.out.println("Sem aumento!");
+			break;
+		}
+		
+		valoraumento = 	salario - salariofinal;
+		valorpercentual = valoraumento / (salario * 0.1);
+		
+		if (codigo == 1) {
+		System.out.println("Cargo: Escrituraria. ");
+		}
+		else if (codigo == 2) {
+			System.out.println("Cargo: Secretario. ");
+			}
+		else if (codigo == 3) {
+			System.out.println("Cargo: Caixa. ");
+			}
+		else if (codigo == 4) {
+			System.out.println("Cargo: Gerente. ");
+			}
+		else if (codigo == 5) {
+			System.out.println("Cargo: Diretor. ");
+			}
+		//informar o cargo usando if-else!
+		System.out.println("Salario: "+salario+"$.");
+		if (codigo != 5) {
+		System.out.println("Valor do aumento do funcionario: "+valoraumento+"$.");
+		System.out.println("Valor do aumento percentual do funcionario: "+valorpercentual+"%.");
+		}
+	}
+
+}
