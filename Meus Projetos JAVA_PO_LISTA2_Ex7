@@ -4,12 +4,13 @@ import java.util.Scanner;
 
 public class Ex7 {
 
-	public static void main(String[] args) {
+		public static void main(String[] args) {
 		Scanner ler = new Scanner (System.in);
 		double salario, salariofinal, valoraumento, valorpercentual;
 		int codigo, porcentagem, cargo;
 	
-		
+		//Entrada de cagos!
+		codigo = 0;
 		System.out.println("\n\nCargos:");
 		System.out.println("(1)-Escriturario." );
 		System.out.println("(2)-Secretario." );
@@ -19,11 +20,22 @@ public class Ex7 {
 		System.out.println("(0)-Sair." );
 		System.out.print("Informe o codigo do funcionario:\n ");
 		codigo = ler.nextInt();
+		if (codigo < 0 || codigo > 5 ){
+		    System.out.print("Codigo do funcionario invalido:\n ");
+		    System.out.print("Informe o codigo do funcionario de 1 a 5:\n ");
+		    codigo = ler.nextInt();
+		}
 		System.out.print("Informe o salario do funcionario:\n ");
+		
+		// Toda as variaveis do tipo Int devera ser inicializadas!
+		
 		salario = ler.nextDouble();
 		salariofinal = 0;
 		valoraumento = 0;
 		cargo = 0;
+		
+		// Menu de seleção!
+		 
 		switch (codigo) {
 		case 0:
 			break;
@@ -47,6 +59,8 @@ public class Ex7 {
 		valoraumento = 	salario - salariofinal;
 		valorpercentual = valoraumento / (salario * 0.1);
 		
+		//informar o cargo usando if-else!
+		
 		if (codigo == 1) {
 		System.out.println("Cargo: Escrituraria. ");
 		}
@@ -62,12 +76,18 @@ public class Ex7 {
 		else if (codigo == 5) {
 			System.out.println("Cargo: Diretor. ");
 			}
-		//informar o cargo usando if-else!
+		
+		// Devera informar o valor do aumento e percentual de todos os funcionarios exeto do deiretos usando if!
+		
 		System.out.println("Salario: "+salario+"$.");
 		if (codigo != 5) {
 		System.out.println("Valor do aumento do funcionario: "+valoraumento+"$.");
 		System.out.println("Valor do aumento percentual do funcionario: "+valorpercentual+"%.");
 		}
+		else if (codigo == 5){
+		    System.out.print("Cargo diretor nao possui aumento!.");
+		}
+		
 	}
 
 }
