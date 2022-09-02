@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Ex7 {
 
 		public static void main(String[] args) {
-		Scanner ler = new Scanner (System.in);
-		double salario, salariofinal, valoraumento, valorpercentual;
-		int codigo, porcentagem, cargo;
+	Scanner ler = new Scanner (System.in);
+		double salario, salariofinal, valorpercentual;
+		int codigo, cargo;
 	
 		//Entrada de cagos!
 		codigo = 0;
@@ -31,7 +31,6 @@ public class Ex7 {
 		
 		salario = ler.nextDouble();
 		salariofinal = 0;
-		valoraumento = 0;
 		cargo = 0;
 		
 		// Menu de seleção!
@@ -56,8 +55,8 @@ public class Ex7 {
 			break;
 		}
 		
-		valoraumento = 	salario - salariofinal;
-		valorpercentual = valoraumento / (salario * 0.1);
+		
+		valorpercentual = salariofinal / (salario * 0.01);
 		
 		//informar o cargo usando if-else!
 		
@@ -81,8 +80,8 @@ public class Ex7 {
 		
 		System.out.println("Salario: "+salario+"$.");
 		if (codigo != 5) {
-		System.out.println("Valor do aumento do funcionario: "+valoraumento+"$.");
-		System.out.println("Valor do aumento percentual do funcionario: "+valorpercentual+"%.");
+		System.out.println("Valor do aumento do funcionario: "+salariofinal+"$.");
+		System.out.print("Valor do aumento percentual do funcionario: "+valorpercentual+"%.");
 		}
 		else if (codigo == 5){
 		    System.out.print("Cargo diretor nao possui aumento!.");
