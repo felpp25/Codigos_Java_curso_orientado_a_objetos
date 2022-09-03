@@ -1,0 +1,21 @@
+public static void main(String[] args) {
+		Scanner ler = new Scanner (System.in);
+		int numero, int1, int2, i, r, c;
+		
+		System.out.print("Informe um numero inteiro a ser calculado: ");
+		numero = ler.nextInt();
+		System.out.print("Informe o primeiro intervalo: ");
+		int1 = ler.nextInt();
+		System.out.print("Informe o segundo intervalo: ");
+		int2 = ler.nextInt();
+		c = 0;
+		r = 0;
+		for(i=int1;i<int2;){
+		    i = i + numero;
+		    r = i/numero;
+		    c = r*numero;
+		    System.out.print(+c);
+		    System.out.print(",");
+		     
+		}
+	}
