@@ -1,0 +1,15 @@
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner ler = new Scanner (System.in);
+		int senha;
+		System.out.print("Informe a senha do usário: ");
+		senha = ler.nextInt();
+		while(senha != 1234){
+		    System.out.print("Senha incorreta, tente novamente: ");
+		    senha = ler.nextInt();
+	        }
+    	System.out.print("Senha correta! Bem vindo ao sistema: ");
+	}
+	    
+}
