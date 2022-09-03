@@ -10,12 +10,13 @@ public static void main(String[] args) {
 		int2 = ler.nextInt();
 		c = 0;
 		r = 0;
+		System.out.print("Números divisíveis por "+numero+" no intervalo de "+int1+" a "+int2+": ");
 		for(i=int1;i<int2;){
 		    i = i + numero;
 		    r = i/numero;
 		    c = r*numero;
 		    System.out.print(+c);
-		    System.out.print(",");
+		    System.out.print(", ");
 		     
 		}
 	}
